@@ -1,0 +1,211 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/14/2016  13:48:00  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE .\Obj\P4_1.obj TO .\Obj\P4_1 PRINT (.\Obj\P4_1.m51) RAMSIZE (256) CODE (0X0000-0XFFFF)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Obj\P4_1.obj (P4_1)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?ICALL)
+
+
+LINK MAP OF MODULE:  .\Obj\P4_1 (P4_1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0003H     UNIT         ?DT?P4_1
+            DATA    000BH     0002H     UNIT         _DATA_GROUP_
+            IDATA   000DH     0001H     UNIT         ?STACK
+
+            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
+                    0000H     2446H                  *** GAP ***
+            XDATA   2446H     0001H     ABSOLUTE     
+            XDATA   2447H     0001H     ABSOLUTE     
+            XDATA   2448H     0001H     ABSOLUTE     
+            XDATA   2449H     0001H     ABSOLUTE     
+            XDATA   244AH     0001H     ABSOLUTE     
+            XDATA   244BH     0001H     ABSOLUTE     
+            XDATA   244CH     0001H     ABSOLUTE     
+            XDATA   244DH     0001H     ABSOLUTE     
+            XDATA   244EH     0001H     ABSOLUTE     
+            XDATA   244FH     0001H     ABSOLUTE     
+                    2450H     00F6H                  *** GAP ***
+            XDATA   2546H     0001H     ABSOLUTE     
+            XDATA   2547H     0001H     ABSOLUTE     
+            XDATA   2548H     0001H     ABSOLUTE     
+            XDATA   2549H     0001H     ABSOLUTE     
+            XDATA   254AH     0001H     ABSOLUTE     
+            XDATA   254BH     0001H     ABSOLUTE     
+            XDATA   254CH     0001H     ABSOLUTE     
+            XDATA   254DH     0001H     ABSOLUTE     
+            XDATA   254EH     0001H     ABSOLUTE     
+            XDATA   254FH     0001H     ABSOLUTE     
+                    2550H     0330H                  *** GAP ***
+            XDATA   2880H     0001H     ABSOLUTE     
+            XDATA   2881H     0001H     ABSOLUTE     
+            XDATA   2882H     0001H     ABSOLUTE     
+            XDATA   2883H     0001H     ABSOLUTE     
+            XDATA   2884H     0001H     ABSOLUTE     
+            XDATA   2885H     0001H     ABSOLUTE     
+            XDATA   2886H     0001H     ABSOLUTE     
+                    2887H     0001H                  *** GAP ***
+            XDATA   2888H     0001H     ABSOLUTE     
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/14/2016  13:48:00  PAGE 2
+
+
+            XDATA   2889H     0001H     ABSOLUTE     
+                    288AH     00F6H                  *** GAP ***
+            XDATA   2980H     0001H     ABSOLUTE     
+            XDATA   2981H     0001H     ABSOLUTE     
+            XDATA   2982H     0001H     ABSOLUTE     
+            XDATA   2983H     0001H     ABSOLUTE     
+            XDATA   2984H     0001H     ABSOLUTE     
+            XDATA   2985H     0001H     ABSOLUTE     
+            XDATA   2986H     0001H     ABSOLUTE     
+                    2987H     0001H                  *** GAP ***
+            XDATA   2988H     0001H     ABSOLUTE     
+            XDATA   2989H     0001H     ABSOLUTE     
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0055H     UNIT         ?PR?MAIN?P4_1
+            CODE    0058H     0018H     UNIT         ?PR?_MDELAY20US?P4_1
+            CODE    0070H     000CH     UNIT         ?C_C51STARTUP
+            CODE    007CH     0006H     UNIT         ?C?LIB_CODE
+
+
+
+OVERLAY MAP OF MODULE:   .\Obj\P4_1 (P4_1)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?P4_1
+
+?PR?MAIN?P4_1                  000BH    0002H
+  +--> ?PR?_MDELAY20US?P4_1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Obj\P4_1 (P4_1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        P4_1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  X:2989H         PUBLIC        pLED_DMA_XL
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  X:2888H         PUBLIC        LED_DMA_XH
+  D:00E8H         PUBLIC        IE_EX
+  X:2889H         PUBLIC        LED_DMA_XL
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:00D8H         PUBLIC        USB_INT_FG
+  B:0090H.3       PUBLIC        EnableIAP
+  C:0003H         PUBLIC        main
+  C:0058H         PUBLIC        _mDelay20us
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/14/2016  13:48:00  PAGE 3
+
+
+  X:2983H         PUBLIC        pLED_CK_SE
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00F8H         PUBLIC        SPI0_STAT
+  X:2883H         PUBLIC        LED_CK_SE
+  X:2982H         PUBLIC        pLED_DATA
+  D:00C2H         PUBLIC        P4_DIR
+  D:0008H         PUBLIC        tasksArr
+  X:2882H         PUBLIC        LED_DATA
+  X:2981H         PUBLIC        pLED_CTRL
+  D:00C0H         PUBLIC        P4_OUT
+  X:2547H         PUBLIC        pUEP2_3_MOD
+  X:2546H         PUBLIC        pUEP4_1_MOD
+  X:2984H         PUBLIC        pLED_DMA_AH
+  X:2980H         PUBLIC        pLED_STAT
+  X:2985H         PUBLIC        pLED_DMA_AL
+  X:2548H         PUBLIC        pUEP0_DMA_H
+  D:00C8H         PUBLIC        T2CON
+  X:254AH         PUBLIC        pUEP1_DMA_H
+  X:254CH         PUBLIC        pUEP2_DMA_H
+  X:254EH         PUBLIC        pUEP3_DMA_H
+  X:2986H         PUBLIC        pLED_DMA_CN
+  X:2549H         PUBLIC        pUEP0_DMA_L
+  X:2881H         PUBLIC        LED_CTRL
+  X:254BH         PUBLIC        pUEP1_DMA_L
+  X:254DH         PUBLIC        pUEP2_DMA_L
+  X:254FH         PUBLIC        pUEP3_DMA_L
+  X:2447H         PUBLIC        UEP2_3_MOD
+  X:2446H         PUBLIC        UEP4_1_MOD
+  X:2884H         PUBLIC        LED_DMA_AH
+  X:2880H         PUBLIC        LED_STAT
+  X:2885H         PUBLIC        LED_DMA_AL
+  X:2448H         PUBLIC        UEP0_DMA_H
+  X:244AH         PUBLIC        UEP1_DMA_H
+  X:244CH         PUBLIC        UEP2_DMA_H
+  X:244EH         PUBLIC        UEP3_DMA_H
+  X:2988H         PUBLIC        pLED_DMA_XH
+  X:2886H         PUBLIC        LED_DMA_CN
+  X:2449H         PUBLIC        UEP0_DMA_L
+  D:00D0H         PUBLIC        PSW
+  X:244BH         PUBLIC        UEP1_DMA_L
+  X:244DH         PUBLIC        UEP2_DMA_L
+  X:244FH         PUBLIC        UEP3_DMA_L
+  -------         PROC          _MDELAY20US
+  D:0006H         SYMBOL        n
+  C:0058H         LINE#         34
+  C:0058H         LINE#         35
+  C:0058H         LINE#         36
+  C:0067H         LINE#         37
+  C:0068H         LINE#         38
+  C:006FH         LINE#         39
+  -------         ENDPROC       _MDELAY20US
+  -------         PROC          MAIN
+  -------         DO            
+  D:000BH         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         52
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/14/2016  13:48:00  PAGE 4
+
+
+  C:0003H         LINE#         53
+  C:0003H         LINE#         54
+  C:0008H         LINE#         56
+  C:000BH         LINE#         57
+  C:000EH         LINE#         58
+  C:0015H         LINE#         60
+  C:0015H         LINE#         61
+  C:0018H         LINE#         62
+  C:001BH         LINE#         63
+  C:0022H         LINE#         64
+  C:0029H         LINE#         65
+  C:0029H         LINE#         66
+  C:0031H         LINE#         67
+  C:003BH         LINE#         68
+  C:0044H         LINE#         69
+  C:004FH         LINE#         70
+  C:0056H         LINE#         71
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        P4_1
+
+  -------         MODULE        ?C?ICALL
+  C:007CH         PUBLIC        ?C?ICALL
+  C:0080H         PUBLIC        ?C?ICALL2
+  -------         ENDMOD        ?C?ICALL
+
+Program Size: data=14.0 xdata=38 code=130
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,4 @@
+".\Obj\P4_1.obj" 
+TO ".\Obj\P4_1" 
+PRINT(".\Obj\P4_1.m51") RAMSIZE(256) 
+CODE( 0X0000-0XFFFF )
