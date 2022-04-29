@@ -1,0 +1,6 @@
+".\obj\Compound.obj",
+".\obj\DEBUG.obj",
+".\obj\main.obj" 
+TO ".\obj\Compound_Dev_1_4" 
+PRINT(".\list\Compound_Dev_1_4.m51") RAMSIZE(256) 
+DISABLEWARNING (16) 

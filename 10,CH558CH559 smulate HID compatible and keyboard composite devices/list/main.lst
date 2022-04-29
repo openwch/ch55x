@@ -1,0 +1,71 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              03/13/2017 11:42:24 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\obj\main.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c LARGE OPTIMIZE(6,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\list\main.
+                    -lst) OBJECT(.\obj\main.obj)
+
+line level    source
+
+   1          /********************************** (C) COPYRIGHT ******************************
+   2          * File Name          :Compound_Dev.C                                                                                    
+   3          * Author             : WCH                                                      
+   4          * Version            : V1.2                                                     
+   5          * Date               : 2017/02/24                                               
+   6          * Description        : A demo for USB compound device created by CH559, support 
+   7                                                     keyboard and mouse, and HID compatible device.           
+   8          ********************************************************************************/
+   9          
+  10          #include        "Compound.h"
+  11          #include        "debug.h"
+  12          #include        "stdio.h"
+  13          
+  14          extern UINT8    FLAG;                                                                                           // Trans complete flag
+  15          extern UINT8    EnumOK;                                                                                         // Enum ok flag
+  16          
+  17          void main( void )
+  18          {
+  19   1              mDelaymS(5);                                                    //
+  20   1          mInitSTDIO( );                                                  // Init Stdio, support UART print out
+  21   1      
+  22   1      #if     DEBUG
+  23   1          printf( "Start config.\r\n" );
+  24   1          printf( "Init USB device.\r\n" );
+  25   1      #endif
+  26   1              USBDeviceCfg();                                                  // Configure the USB module
+  27   1          USBDeviceEndPointCfg();                                          // Configure the Endpoint
+  28   1          USBDeviceIntCfg();                                               // configure the USB Interrupt
+  29   1              
+  30   1              UEP1_T_LEN = 0;                                                  // Reset the trans length register
+  31   1          UEP2_T_LEN = 0;                                                  //
+  32   1          FLAG = 0;
+  33   1              EnumOK = 0;
+  34   1          while(1)
+  35   1              {
+  36   2              if( EnumOK == 1 )
+  37   2              {
+  38   3                  HIDValueHandle();
+  39   3              }
+  40   2      
+  41   2              mDelaymS( 100 );                                             
+  42   2          }
+  43   1      }
+  44          
+  45          /**************************** END *************************************/
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     70    ----
+   CONSTANT SIZE    =     35    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+C51 COMPILER V9.52.0.0   MAIN                                                              03/13/2017 11:42:24 PAGE 2   
+
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
